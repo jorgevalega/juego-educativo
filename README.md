@@ -43,14 +43,14 @@ git clone https://github.com/jorgevalega/juego-educativo.git
 cd juego-educativo
 ```
 
-**3. Crie e ative um ambiente virtual (recomendado)**
+**3. Crea y activa un entorno virtual (recomendado)**
 
 ```bash
 python -m venv venv
 source venv/bin/activate       # Linux/macOS
 venv\Scripts\activate          # Windows
 ```
-**4. Instale as dependências**
+**4. Instala las dependencias**
 
 ```bash
 pip install -r requirements.txt
@@ -58,52 +58,52 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ Como usar
+## ▶️ Cómo usar
 
-**1. Execute a aplicação localmente com:**
+**1. Ejecuta la aplicación localmente con:**
 
 ```bash
 python app.py
 ```
 
-**2. Abra o navegador e acesse:**
+**2. Abre el navegador y accede a:**
 
 ```bash
 http://localhost:5000
 ```
 
-**3. Toque nas letras ou números para ouvir sua pronúncia.**
-Ao completar uma página, uma medalha aparece com som de parabéns e a aplicação avança automaticamente para a próxima página.
+**3. Haz clic en las letras o números para escuchar su pronunciación.**
+Al completar una página, aparecerá una medalla con sonido de felicitaciones y el juego avanzará automáticamente a la siguiente página.
 
 ---
 
-## 📁 Estrutura de Pastas
+## 📁 Estructura de Carpetas
 
 ```bash
-jogo-educativo/
+juego-educativo/
 ├── app.py
 ├── requirements.txt
 ├── static/
 │   └── audio/
 │       ├── A.mp3
 │       ├── 1.mp3
-│       └── parabens.mp3
+│       └── felicitaciones.mp3
 ├── templates/
 │   └── index.html
 ├── assets/
-│   ├── jogo.jpg
-│   └── parabens.jpg
+│   ├── juego.jpg
+│   └── felicitaciones.jpg
 └── README.md
 ```
 
 ---
 
-## 🧾 Dependências
+## 🧾 Dependencias
 
-- `flask` — Framework web leve e poderoso para Python
-- `gtts` (opcional) — Utilizado para gerar os áudios em MP3 (Text-to-Speech do Google)
+- `flask` — Framework web ligero y potente para Python
+- `gtts` (opcional) — Utilizado para generar los audios MP3 (Google Text-to-Speech)
 
-Todas as dependências necessárias estão listadas em [`requirements.txt`](requirements.txt).
+Todas las dependencias necesarias están listadas en [`requirements.txt`](requirements.txt).
 
 ---
 
