@@ -109,10 +109,10 @@ Todas las dependencias necesarias están listadas en [`requirements.txt`](requir
 
 ## 🧑‍💻 Autor
 
-Desenvolvido por [Jorge Valega](https://github.com/jorgevalega) – apaixonado por automação, acessibilidade e ferramentas de aprendizado de idiomas.
+Desarrollado por [Jorge Valega](https://github.com/jorgevalega) – apasionado por la automatización, la accesibilidad y las herramientas de aprendizaje de idiomas.
 
 ---
 
-## 📄 Licença
+## 📄 Licencia
 
-Este projeto está licenciado sob a [Licença MIT](LICENSE).
+Este proyecto está licenciado bajo la [Licencia MIT](LICENSE).
