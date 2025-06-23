@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -57,16 +57,16 @@
             background-color: #a5d6a7 !important;
         }
 
-        .item.selecionado {
+        .item.seleccionado {
             background-color: #66bb6a !important;
         }
 
-        .item.desativado {
+        .item.desactivado {
             pointer-events: none;
             opacity: 0.5;
         }
 
-        .medalha {
+        .medalla {
             position: fixed;
             top: 0;
             left: 0;
@@ -98,7 +98,7 @@
 </head>
 
 <body>
-    <h1>Aprenda Letras e Números</h1>
+    <h1>Aprende Letras y Números</h1>
     <div class="subtitulo">Página {{ pagina_atual }} de {{ paginas_total }} ({{ tipo }})</div>
 
     <div class="grid" id="grid">
@@ -107,58 +107,58 @@
         {% endfor %}
     </div>
 
-    <div class="medalha" id="medalhaGanha">🏅 ¡Felicidades!</div>
+    <div class="medalla" id="medallaGana">🏅 ¡Felicidades!</div>
 
     <audio id="audio" preload="auto"></audio>
-    <audio id="audioParabens" preload="auto" src="/static/audio/parabens.mp3"></audio>
+    <audio id="audioFelicidades" preload="auto" src="/static/audio/felicidades.mp3"></audio>
 
     <script>
-        let selecionado = null;
-    let selecionados = new Set();
-    const totalItens = {{ grupo|length }};
-    const audio = document.getElementById("audio");
-    const audioParabens = document.getElementById("audioParabens");
-    const grid = document.getElementById("grid");
+        let seleccionado = null;
+        let seleccionados = new Set();
+        const totalItems = {{ grupo|length }};
+        const audio = document.getElementById("audio");
+        const audioFelicidades = document.getElementById("audioFelicidades");
+        const grid = document.getElementById("grid");
 
-    function tocar(elemento, nome) {
-      if (selecionado) {
-        selecionado.classList.remove("selecionado");
-        selecionado.classList.add("ativo");
-      }
+        function tocar(elemento, nombre) {
+            if (seleccionado) {
+                seleccionado.classList.remove("seleccionado");
+                seleccionado.classList.add("ativo");
+            }
 
-      elemento.classList.remove("ativo");
-      elemento.classList.add("selecionado");
-      selecionado = elemento;
+            elemento.classList.remove("ativo");
+            elemento.classList.add("seleccionado");
+            seleccionado = elemento;
 
-      audio.pause();
-      audio.src = "/static/audio/" + nome + ".mp3";
-      audio.load();
-      audio.play();
+            audio.pause();
+            audio.src = "/static/audio/" + nombre + ".mp3";
+            audio.load();
+            audio.play();
 
-      selecionados.add(nome);
+            seleccionados.add(nombre);
 
-      if (selecionados.size >= totalItens) {
-        setTimeout(() => {
-          mostrarMedalha();
-        }, 1500);
-      }
-    }
+            if (seleccionados.size >= totalItems) {
+                setTimeout(() => {
+                    mostrarMedalla();
+                }, 1500);
+            }
+        }
 
-    function mostrarMedalha() {
-      const medalha = document.getElementById("medalhaGanha");
+        function mostrarMedalla() {
+            const medalla = document.getElementById("medallaGana");
 
-      // Desativa todos os itens
-      const itens = document.querySelectorAll(".item");
-      itens.forEach(item => item.classList.add("desativado"));
+            // Desactiva todos los elementos
+            const items = document.querySelectorAll(".item");
+            items.forEach(item => item.classList.add("desactivado"));
 
-      medalha.style.display = "flex";
-      audioParabens.play();
+            medalla.style.display = "flex";
+            audioFelicidades.play();
 
-      // Avança automaticamente após 5 segundos
-      setTimeout(() => {
-        window.location.href = "/?pagina={{ pagina + 1 if pagina < total else 1 }}";
-      }, 5000);
-    }
+            // Avanza automáticamente después de 5 segundos
+            setTimeout(() => {
+                window.location.href = "/?pagina={{ pagina + 1 if pagina < total else 1 }}";
+            }, 5000);
+        }
     </script>
 </body>
 
