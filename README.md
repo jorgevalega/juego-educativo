@@ -34,8 +34,8 @@ Puedes acceder y probar el juego directamente en:
 
 ## 📸 Capturas de Pantalla
 
-![Juego Educativo](assets/jogo.jpg)
-![Medalla y felicitaciones](assets/parabens.jpg)
+![Juego Educativo](assets/juego.jpg)
+![Medalla y felicitaciones](assets/felicidades.jpg)
 
 ---
 
