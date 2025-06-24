@@ -4,6 +4,14 @@
 
 ---
 
+## 🌐 Demostración Online
+
+Puedes acceder y probar el juego directamente en:
+
+👉 [https://juego.valega.dev](https://juego.valega.dev)
+
+---
+
 ## 🌍 Idiomas Disponibles
 
 - 🇧🇷 [Versão em Português](https://github.com/jorgevalega/jogo-educativo)
